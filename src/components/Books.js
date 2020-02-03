@@ -14,17 +14,20 @@ import { fetchBooks } from '../actions/bookActions';
          }
      }
 
-    render() {
-        const bookItems = this.props.books.map(book => (
-            <div key={book.id}>
-               <h3>{book.title}</h3>
-               <h3>{book.author}</h3>
-             </div> 
-        ));
+      bookItems = () => this.props.books.map(book => (
+        <div key={book.id}>
+           <h3>{book.title}</h3>
+           <h3>{book.author}</h3>
+           <h3>{book.genre}</h3>
+         </div> 
+    ));
+
+    render() { 
+        
         return (
             <div>
               <h1>Books</h1> 
-              {bookItems}  
+              {this.bookItems()}   
             </div>
         )
     }
