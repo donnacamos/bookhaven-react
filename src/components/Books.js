@@ -28,6 +28,7 @@ import { fetchBooks } from '../actions/bookActions';
             <div>
               <h1>Books</h1> 
               {this.bookItems()}   
+              
             </div>
         )
     }
