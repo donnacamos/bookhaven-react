@@ -1,14 +1,15 @@
 import React from 'react'; 
 import { Divider } from 'semantic-ui-react'; 
 
-const Home = () => {
-    return (
+export class Home extends React.Component {
+    render() {
+        return (
 
-        <div className="Home">
-            <Divider /> 
-
-        </div>
-    )
-}
-
-export default Home; 
+            <div className="Home">
+                <Divider /> 
+    
+            </div>
+        )
+      }
+    }
+    
