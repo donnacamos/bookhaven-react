@@ -1,94 +1,88 @@
-// import React from 'react';
-// import './App.css';
-// import { Provider } from 'react-redux'; 
-//  import  store from './store.js'; 
+import React from 'react';
+import './App.css';
+import { Provider } from 'react-redux'; 
+ import  store from './store.js'; 
 
-// import BookForm from './components/BookForm'; 
-//  import Books from './components/Books';
-// import NavBar from './components/NavBar'; 
-// import Reviews from './components/Reviews';
-// import Home from './components/Home'; 
-// import About from './components/About'; 
-// import Footer from './components/Footer'; 
-// import ReviewForm from './components/ReviewForm';
-// import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-// import { Divider } from 'semantic-ui-react'; 
+
+ import Books from './components/Books';
+import Navigation from './components/Navigation'; 
+import Reviews from './components/Reviews';
+import Home from './components/Home'; 
+import About from './components/About'; 
+import Footer from './components/Footer'; 
+import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Divider } from 'semantic-ui-react'; 
 
 
 
  
 
-// function App() {
+function App() {
   
-//   // componentDidMount() {
-//   //   this.props.getBooks(); 
-//   // }
-//   return (
-//     <div>
-//       <Provider store={store}> 
-//       <Router>
-//       <div className="App">
-//     <NavBar /> 
+  // componentDidMount() {
+  //   this.props.getBooks(); 
+  // }
+  return (
+    <div>
+      <Provider store={store}> 
+      <Router>
+      <div className="App">
+    <Navigation /> 
 
-//     <h3>BOOK HAVEN</h3>
-//     <BookForm /> 
-//     <hr /> 
-//     <ReviewForm /> 
+    <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route path="/books" component={Books} />
+                <Route path="/reviews" component={Reviews} /> 
+                <Route path="/about" component={About}/> 
+    </Switch> 
 
-//     <Switch>
-//                 <Route exact path="/" component={Home}/>
-//                 <Route path="/books" component={Books} />
-//                 <Route path="/reviews" component={Reviews} /> 
-//                 <Route path="/about" component={About}/> 
-//     </Switch> 
+    <Divider />
 
-//     <Divider />
-
-//     <Footer /> 
+    <Footer /> 
 
 
 
-//     </div>
+    </div>
 
-//       </Router>
-//       </Provider> 
-//     </div>
+      </Router>
+      </Provider> 
+    </div>
 
   
     
     
     
-//   );
-// }
-
-// export default App;
-
-import React, {Component} from "react";
-import {Route, Router} from 'react-router-dom';
-
-import {Navigation} from './components/Navigation';
- import {Footer} from './components/Footer'; 
- import {Home} from './components/Home';
-
-
-class App extends Component {
-    render() {
-        return (
-            <div className="container-fluid">
-              <Router>
-                <div className="row">
-                    <main className="main-content col-lg-12 col-md-12 col-sm-12 p-0">
-                        <Navigation/>
-                        <div class="main-content-container container-fluid px-4">
-                            <Route  path="/" component={Home}  />
-                        </div>
-                        <Footer/>
-                    </main>
-                </div>
-                </Router>
-            </div>
-        );
-    }
+  );
 }
 
 export default App;
+
+// import React, {Component} from "react";
+// import {Route, Router} from 'react-router-dom';
+
+// import {Navigation} from './components/Navigation';
+//  import {Footer} from './components/Footer'; 
+//  import {Home} from './components/Home';
+
+
+// class App extends Component {
+//     render() {
+//         return (
+//             <div className="container-fluid">
+//               <Router>
+//                 <div className="row">
+//                     <main className="main-content col-lg-12 col-md-12 col-sm-12 p-0">
+//                         <Navigation/>
+//                         <div class="main-content-container container-fluid px-4">
+//                             <Route  path="/" component={Home}  />
+//                         </div>
+//                         <Footer/>
+//                     </main>
+//                 </div>
+//                 </Router>
+//             </div>
+//         );
+//     }
+// }
+
+// export default App;
