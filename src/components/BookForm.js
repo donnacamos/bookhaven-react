@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux'; 
 import { createBook } from '../actions/bookActions'; 
+import Rating from './Rating'; 
  
 
  class BookForm extends Component {
@@ -10,7 +11,8 @@ import { createBook } from '../actions/bookActions';
          this.state = {
              title: '',
              author: '', 
-             genre: '' 
+             genre: '', 
+             review: '' 
          };
 
          this.onChange = this.onChange.bind(this);
@@ -27,7 +29,8 @@ import { createBook } from '../actions/bookActions';
         const book = {
             title: this.state.title, 
             author: this.state.author,
-            genre: this.state.genre 
+            genre: this.state.genre, 
+            review: this.state.review 
         }
 
        this.props.createBook(book) 
@@ -54,6 +57,13 @@ import { createBook } from '../actions/bookActions';
                        <label>Genre: </label><br /> 
                        <input type="text" name="genre" onChange={this.onChange}
                         value={this.state.genre} /> 
+                   </div>
+                   <br /> 
+                   <Rating /> 
+                   <div>
+                       <label>Review: </label><br /> 
+                       <textarea type="text" name="review" onChange={this.onChange}
+                        value={this.state.review} /> 
                    </div>
                 
                    
