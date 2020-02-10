@@ -14,7 +14,7 @@ export const fetchBooks = () => dispatch => {
 
 export const createBook = (bookData) => dispatch => {
     console.log('book saved'); 
-    fetch('http://localhost:3001/api/v1/book',  {
+    fetch('http://localhost:3001',  {
         method: 'POST',
         headers: {
             'content-type': 'application/json'
