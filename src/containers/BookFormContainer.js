@@ -90,27 +90,27 @@ class BookFormContainer extends Component {
 					inputType={'text'}
 					title={'Title'}
 					name={'name'}
-					controlFunc={this.titleChange}
+					controlFunc={this.handleTitleChange}
 					content={this.state.title} 
 					placeholder={'Type title here'} /> 
                 <SingleInput
 					inputType={'text'}
 					title={'Author'}
 					name={'name'}
-					controlFunc={this.authorChange}
+					controlFunc={this.handleAuthorChange}
 					content={this.state.author} 
 					placeholder={'Type author here'} /> 
                  <SingleInput
 					inputType={'text'}
 					title={'Genre'}
 					name={'name'}
-					controlFunc={this.genreChange}
+					controlFunc={this.handleGenreChange}
 					content={this.state.genre} 
 					placeholder={'Type genre here'} /> 
 				<Select
 					name={'rating'}
 					placeholder={'Choose your rating'}
-					controlFunc={this.handleRating}
+					controlFunc={this.handleRatingSelect}
 					options={this.state.rating}
 					selectedOption={this.state.ratingSelection} />
 				<TextArea
