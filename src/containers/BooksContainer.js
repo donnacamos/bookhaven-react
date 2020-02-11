@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Books from '../components/Books'; 
 import PropTypes from 'prop-types';
-import { fetchBooks } from '../actions/bookActions'
+import { fetchBooks } from '../actions/bookActions';
 
 
 // finish Container components and get form to render with stars 

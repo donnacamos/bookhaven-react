@@ -1,4 +1,4 @@
-import { FETCH_BOOKS, NEW_BOOK } from './types';
+import { FETCH_BOOKS } from './types';
 
 export const fetchBooks = () => dispatch => {
         fetch('http://localhost:3001/api/v1/books') 
@@ -12,22 +12,3 @@ export const fetchBooks = () => dispatch => {
 
 }
 
-export const createBook = (bookData) => dispatch => {
-    console.log('book saved'); 
-    fetch('http://localhost:3001',  {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(bookData)
-    })
-      .then(res => res.json())
-      .then(book => 
-         dispatch({
-        type: NEW_BOOK, 
-        payload: book  
-    })
-    
-    ); 
-
-}; 
